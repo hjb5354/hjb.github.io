@@ -1,0 +1,36 @@
+{
+  "scripts": {
+    "dev": "webpack-dev-server --open --hot",
+    "pub": "NODE_ENV=production webpack --config webpack-dist.config.js && rm -rf .public",
+    "format": "prettier --write '**/*.js'  '**/*.md' '**/*.scss' '**/*.html'",
+    "check": "prettier --check '**/*.js' '**/*.md' '**/*.scss' '**/*.html'",
+    "prepare": "husky install"
+
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "chrome-finder": "^1.0.1",
+    "compass-mixins": "^0.12.10",
+    "css-loader": "^0.28.5",
+    "end-webpack-plugin": "^1.0.0",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "gh-pages": "^1.0.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^11.0.1",
+    "postcss-loader": "^2.0.6",
+    "prettier": "2.3.2",
+    "sass-loader": "^6.0.5",
+    "style-loader": "^0.18.0",
+    "web-webpack-plugin": "^1.9.3",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
+
+  },
+  "dependencies": {
+    "node-sass": "^8.0.0",
+    "react": "^16.13.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,md,html}": "prettier --write"
+  }
+}
